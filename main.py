@@ -4,6 +4,9 @@ import time
 from pytube import YouTube
 import ffmpeg
 
+print("YouTube Video Downloader [made by rahulbagdi]")
+print("Thank You for using my Software")
+
 n = int(input("Enter number of videos : "))
 
 # Below line read inputs from user using map() function
