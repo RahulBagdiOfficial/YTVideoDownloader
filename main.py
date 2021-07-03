@@ -1,8 +1,10 @@
 import os
+import shutil
 import tempfile
 import time
 from pytube import YouTube
 import ffmpeg
+
 
 print("YouTube Video Downloader [made by rahulbagdi]")
 print("Thank You for using my Software")
@@ -20,6 +22,13 @@ print("Got Temp Folder Successfully")
 resolution = input("Enter Resolution \n e.g '720p' , '1080p' ")
 
 for i in link:
+
+    # Deleting last downloaded files
+    if os.path.isdir(r"{}\\video".format(tempPath)):
+        shutil.rmtree("{}\\video".format(tempPath))
+    if os.path.isdir(r"{}\\audio".format(tempPath)):
+        shutil.rmtree("{}\\audio".format(tempPath))
+
     yt = YouTube(i)
     print("Downloading {}".format(yt.title))
     time.sleep(2)
