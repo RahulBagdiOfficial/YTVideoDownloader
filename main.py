@@ -50,7 +50,7 @@ for i in link:
     print("Initializing Conversion: Combing Audio and Video")
     audio_stream = ffmpeg.input('{}\\audio\\audio.mp4'.format(tempPath))
     video_stream = ffmpeg.input('{}\\video\\video.mp4'.format(tempPath))
-    ffmpeg.output(audio_stream, video_stream, '{}{}[rahulbagdi].mp4'.format(path, yt.title)).run()
+    ffmpeg.output(audio_stream, video_stream, '{}{}.mp4'.format(path, yt.title)).run()
     print("Deleting Temp Files")
     time.sleep(2)
     os.remove(r"{}\\video.mp4".format(videoPath))
